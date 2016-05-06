@@ -1,7 +1,50 @@
 import test from 'ava';
-import isFqdn from './';
+import isFDQN from './';
 
-test('it work!', t => {
-	const result = isFqdn();
-	t.is(result, 42);
+function check({t, valids = [], invalids = [], args}) {
+	valids.forEach(domain => {
+		if (!isFDQN(domain, args)) {
+			t.fail(`${domain} FQDN should be valid`);
+		}
+	});
+
+	invalids.forEach(domain => {
+		if (isFDQN(domain, args)) {
+			t.fail(`${domain} FQDN should not be valid`);
+		}
+	});
+}
+
+test('without trailing dots', t => {
+	check({
+		t,
+		valids: [
+			'domain.com',
+			'dom.plato',
+			'a.domain.co',
+			'foo--bar.com',
+			'xn--froschgrn-x9a.com',
+			'rebecca.blackfriday'
+		],
+		invalids: [
+			'abc',
+			'256.0.0.0',
+			'_.com',
+			'*.some.com',
+			's!ome.com',
+			'domain.com/',
+			'/more.com'
+		]
+	});
 });
+
+test('with trailing dots', t => {
+	check({
+		t,
+		args: {allowTrailingDot: true},
+		valids: [
+			'example.com.'
+		]
+	});
+});
+

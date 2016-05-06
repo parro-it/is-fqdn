@@ -1,7 +1,7 @@
 {
   "name": "is-fqdn",
   "version": "0.0.1",
-  "description": "",
+  "description": "Check if a string represent a fully qualified domain name",
   "repository": "parro-it/is-fqdn",
   "license": "MIT",
   "author": "parro-it",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "engines": {
-    "node": ">=5"
+    "node": ">=6"
   },
   "files": [
     "index.js"
