@@ -1,21 +1,19 @@
 'use strict';
 
-/* eslint-disable camelcase */
+function removeOptionalTrailingDot(str, allowTrailingDot) {
+	if (allowTrailingDot && str[str.length - 1] === '.') {
+		return str.substring(0, str.length - 1);
+	}
+
+	return str;
+}
 
 function isFDQN(_str, {
 	requireTld = true,
 	allowUnderscores = false,
 	allowTrailingDot = false
 } = {}) {
-	let str;
-
-	/* Remove the optional trailing dot before checking validity */
-	if (allowTrailingDot && _str[_str.length - 1] === '.') {
-		str = _str.substring(0, _str.length - 1);
-	} else {
-		str = _str;
-	}
-
+	const str = removeOptionalTrailingDot(_str, allowTrailingDot);
 	const parts = str.split('.');
 
 	if (requireTld) {
