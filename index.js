@@ -8,7 +8,7 @@ function removeOptionalTrailingDot(str, allowTrailingDot) {
 	return str;
 }
 
-function isFDQN(_str, {
+function isFQDN(_str, {
 	requireTld = true,
 	allowUnderscores = false,
 	allowTrailingDot = false
@@ -45,4 +45,4 @@ function isFDQN(_str, {
 	return true;
 }
 
-module.exports = isFDQN;
+module.exports = isFQDN;
