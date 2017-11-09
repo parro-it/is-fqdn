@@ -1,15 +1,15 @@
 import test from 'ava';
-import isFDQN from './';
+import isFQDN from './';
 
 function check({t, valids = [], invalids = [], args}) {
 	valids.forEach(domain => {
-		if (!isFDQN(domain, args)) {
+		if (!isFQDN(domain, args)) {
 			t.fail(`${domain} FQDN should be valid`);
 		}
 	});
 
 	invalids.forEach(domain => {
-		if (isFDQN(domain, args)) {
+		if (isFQDN(domain, args)) {
 			t.fail(`${domain} FQDN should not be valid`);
 		}
 	});
