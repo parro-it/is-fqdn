@@ -13,6 +13,10 @@ function isFQDN(_str, {
 	allowUnderscores = false,
 	allowTrailingDot = false
 } = {}) {
+	if (typeof _str !== 'string') {
+		return false;
+	}
+
 	const str = removeOptionalTrailingDot(_str, allowTrailingDot);
 	const parts = str.split('.');
 

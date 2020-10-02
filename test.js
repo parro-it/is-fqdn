@@ -33,7 +33,10 @@ test('without trailing dots', t => {
 			'*.some.com',
 			's!ome.com',
 			'domain.com/',
-			'/more.com'
+			'/more.com',
+			null,
+			undefined,
+			123
 		]
 	});
 });
