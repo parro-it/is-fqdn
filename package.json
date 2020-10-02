@@ -1,23 +1,23 @@
 {
-  "name": "is-fqdn",
-  "version": "2.0.0",
-  "description": "Check if a string represent a fully qualified domain name",
-  "repository": "parro-it/is-fqdn",
-  "license": "MIT",
-  "author": "parro-it",
-  "scripts": {
-    "test": "ava"
-  },
-  "keywords": [],
-  "engines": {
-    "node": ">=6"
-  },
-  "files": [
-    "index.js"
-  ],
-  "devDependencies": {},
-  "dependencies": {
-    "ava": "^3.13.0",
-    "xo": "^0.14.0"
-  }
+	"name": "is-fqdn",
+	"version": "2.0.0",
+	"description": "Check if a string represent a fully qualified domain name",
+	"repository": "parro-it/is-fqdn",
+	"license": "MIT",
+	"author": "parro-it",
+	"scripts": {
+		"test": "ava && prettier --check .",
+		"format": "prettier --write ."
+	},
+	"keywords": [],
+	"engines": {
+		"node": ">=6"
+	},
+	"files": [
+		"index.js"
+	],
+	"devDependencies": {
+		"prettier": "2.1.2",
+		"ava": "^3.13.0"
+	}
 }

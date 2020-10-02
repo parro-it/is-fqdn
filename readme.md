@@ -15,16 +15,16 @@ npm install --save is-fqdn
 # Usage
 
 ```js
-  const isFQDN = require('is-fqdn');
+const isFQDN = require("is-fqdn");
 
-  console.log(isFQDN('www.parro.it'));
-  // true
+console.log(isFQDN("www.parro.it"));
+// true
 
-	console.log(isFQDN('256.0.0.0'));
-	// false
+console.log(isFQDN("256.0.0.0"));
+// false
 
-	console.log(isFQDN('s!ome.com'));
-	// false
+console.log(isFQDN("s!ome.com"));
+// false
 ```
 
 # License
