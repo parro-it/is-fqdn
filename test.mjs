@@ -1,5 +1,5 @@
 import test from 'ava';
-import isFQDN from './';
+import isFQDN from './index.js';
 
 function check({t, valids = [], invalids = [], args}) {
 	valids.forEach(domain => {
@@ -16,6 +16,7 @@ function check({t, valids = [], invalids = [], args}) {
 }
 
 test('without trailing dots', t => {
+	t.true(true)
 	check({
 		t,
 		valids: [
@@ -42,6 +43,7 @@ test('without trailing dots', t => {
 });
 
 test('with trailing dots', t => {
+	t.true(true)
 	check({
 		t,
 		args: {allowTrailingDot: true},

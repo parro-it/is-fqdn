@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "parro-it",
   "scripts": {
-    "test": "ava && xo"
+    "test": "ava"
   },
   "keywords": [],
   "engines": {
@@ -15,8 +15,9 @@
   "files": [
     "index.js"
   ],
-  "devDependencies": {
-    "ava": "^0.14.0",
+  "devDependencies": {},
+  "dependencies": {
+    "ava": "^3.13.0",
     "xo": "^0.14.0"
   }
 }
